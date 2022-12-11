@@ -14,7 +14,7 @@ pipeline {
             stage('Get Project from Github') {
             steps {
                    echo 'Getting Project from Git'
-                git branch: 'Main', url: 'https://github.com/MouhebBenAbdelKader/Devops.git',
+                git branch: 'main', url: 'https://github.com/MouhebBenAbdelKader/Devops.git',
                 credentialsId:'git_access'
 
             }
