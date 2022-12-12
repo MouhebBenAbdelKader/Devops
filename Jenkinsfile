@@ -53,21 +53,18 @@ pipeline {
      stage("nexus") {
         steps{
            echo "deploy project on nexus"
-           nexusArtifactUploader artifacts: [
-           		[
-           			artifactId: 'ExamThourayaS2',
-           			classifier: '',
-           			file: 'target/ExamThourayaS2-1.0.jar',
-           			type: 'jar'
-           		]
-           	],
-           	credentialsId: 'nexus3',
-           	groupId: 'tn.esprit',
-           	nexusUrl: '192.168.1.105:8081/repository/maven-releases',
-           	nexusVersion: 'nexus3',
-           	protocol: 'http',
-           	repository: 'docker-exam-releases',
-           	version: '1.0'
+           nexusArtifactUploader artifacts:
+           [[artifactId: 'ExamThourayaS2',
+           classifier: '',
+           file: 'target/ExamThourayaS2-1.0.0.jar',
+           type: 'jar']],
+           credentialsId: 'nexus3',
+           groupId: 'tn.esprit',
+           nexusUrl: 'http://192.168.1.105:8081/repository/maven-releases',
+           nexusVersion: 'nexus3',
+           protocol: 'http',
+           repository: 'docker-exam-releases',
+           version: '1.0.0'
         }
      }
 
