@@ -74,7 +74,7 @@ pipeline {
         script {
 
               sh" sudo chmod 666 /var/run/docker.sock"
-           sh ' docker build -t mouhebbenabdelkader/examthourayas2-1.0 .'
+           sh ' docker build -t mouhebabdelkadder/examthourayas2-1.0 .'
 
 
           }
