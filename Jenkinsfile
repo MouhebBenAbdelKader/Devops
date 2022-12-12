@@ -55,15 +55,15 @@ pipeline {
            echo "deploy project on nexus"
            nexusArtifactUploader artifacts: [
            		[
-           			artifactId: 'tpAchatProject',
+           			artifactId: 'spring-boot-starter-parent',
            			classifier: '',
-           			file: 'target/tpAchatProject-1.0.jar',
+           			file: 'target/ExamThourayaS2-1.0.jar',
            			type: 'jar'
            		]
            	],
            	credentialsId: 'nexus3',
-           	groupId: 'com.esprit.examen',
-           	nexusUrl: '192.168.1.240:8081/repository/maven-releases',
+           	groupId: 'tn.esprit',
+           	nexusUrl: '192.168.1.105:8081/repository/maven-releases',
            	nexusVersion: 'nexus3',
            	protocol: 'http',
            	repository: 'deploymentRepo',
@@ -77,7 +77,7 @@ pipeline {
         script {
 
               sh" sudo chmod 666 /var/run/docker.sock"
-           sh ' docker build -t houssemriahi/tp_achat_project-1.0 .'
+           sh ' docker build -t mouhebbenabdelkader/ExamThourayaS2-1.0 .'
 
 
           }
@@ -94,9 +94,9 @@ pipeline {
 
 	   stage("Push image to nexus") {
         steps{
-                sh ' docker build -t 192.168.1.240:5050/tp_achat_project-1.0 .'
-         	    sh 'docker login -u admin -p 1327 192.168.1.240:5050'
-            	sh  'docker push 192.168.1.240:5050/tp_achat_project-1.0:latest'
+                sh ' docker build -t 192.168.1.105:8082/ExamThourayaS2-1.0 .'
+         	    sh 'docker login -u admin -p admin 192.168.1.240:8082'
+            	sh  'docker push 192.168.1.105:8082/ExamThourayaS2-1.0:latest'
               }
 
         }
