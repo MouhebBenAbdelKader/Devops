@@ -11,8 +11,8 @@ services:
   volumes:
    - /home/ProjetDevops/volsql/data:/var/lib/mysql
  spring_app:
-  image: MouhebBenAbdelkader/ExamThourayaS2-1.0
-  container_name: examThourayaS2
+  image: mouheb/examthouraya-1.0
+  container_name: examthourayas2
   restart: on-failure
   ports:
    - 8085:8086
