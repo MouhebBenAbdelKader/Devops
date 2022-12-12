@@ -34,10 +34,10 @@ pipeline {
         steps {
 
        sh "mvn clean verify  sonar:sonar \
-        -Dsonar.projectKey=tpAchat \
-        -Dsonar.host.url=http://192.168.1.240:9000 \
+        -Dsonar.projectKey=ExamThourayaS2 \
+        -Dsonar.host.url=http://192.168.1.105:9000 \
         -Dsonar.login=admin \
-        -Dsonar.password=1327 \
+        -Dsonar.password=admin123 \
         -Dsonar.java.binaries=src/main "
 
 
