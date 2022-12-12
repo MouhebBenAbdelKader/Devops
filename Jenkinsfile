@@ -84,19 +84,19 @@ pipeline {
           stage("Publish  image to docker hub") {
         steps{
         sh 'docker login -u mouhebabdelkadder -p dckr_pat_oanTvQFnRjlS_gv0RjWASysUDKA'
-            	sh  'docker push mouhebabdelkadder/examthourayas2-1.0:latest'
+            	sh  'docker push mouhebbenabdelkader/examthourayas2-1.0:latest'
               }
         }
 
 
-	   stage("Push image to nexus") {
+	  /* stage("Push image to nexus") {
         steps{
                 sh ' docker build -t 192.168.1.105:8083/examthourayas2-1.0 .'
          	    sh 'docker login -u admin -p admin 192.168.1.105:8083'
             	sh  'docker push 192.168.1.105:8083/examthourayas2-1.0:latest'
               }
 
-        }
+        }*/
 
         stage('DOCKER COMPOSE') {
        steps{
