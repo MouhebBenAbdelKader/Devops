@@ -84,7 +84,7 @@ pipeline {
           stage("Publish  image to docker hub") {
         steps{
         sh 'docker login -u mouhebabdelkadder -p dckr_pat_oanTvQFnRjlS_gv0RjWASysUDKA'
-            	sh  'docker push mouhebbenabdelkader/examthourayas2-1.0:latest'
+            	sh  'docker push mouhebabdelkadder/examthourayas2-1.0:latest'
               }
         }
 
