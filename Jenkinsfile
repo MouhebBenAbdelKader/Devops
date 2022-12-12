@@ -80,7 +80,7 @@ pipeline {
           }
         }
         }
-     
+
           stage("Publish  image to docker hub") {
         steps{
         sh 'docker login -u mouhebabdelkadder -p dckr_pat_oanTvQFnRjlS_gv0RjWASysUDKA'
@@ -103,26 +103,6 @@ pipeline {
                 sh 'docker-compose up -d --build'
             }
       }
-
-
-     /*-----------*/
-     stage('Mailling') {
-            steps {
-                echo "Sending mail ..."
-
-                    }
-            }
-
-  }
-  post {
-    always {
-	     mail to: "houssem.riahi@esprit.tn",
-               subject: "pipline successfully executed",
-                body: "pipline successfully executed "
-      cleanWs()
-
-
-    }
 
   }
 }
