@@ -94,9 +94,9 @@ pipeline {
 
 	   stage("Push image to nexus") {
         steps{
-                sh ' docker build -t 192.168.1.105:8082/ExamThourayaS2-1.0 .'
-         	    sh 'docker login -u admin -p admin 192.168.1.240:8082'
-            	sh  'docker push 192.168.1.105:8082/ExamThourayaS2-1.0:latest'
+                sh ' docker build -t 192.168.1.105:8089/ExamThourayaS2-1.0 .'
+         	    sh 'docker login -u admin -p admin 192.168.1.240:8089'
+            	sh  'docker push 192.168.1.105:8089/ExamThourayaS2-1.0:latest'
               }
 
         }
