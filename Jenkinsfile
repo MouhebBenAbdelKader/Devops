@@ -55,7 +55,7 @@ pipeline {
            echo "deploy project on nexus"
            nexusArtifactUploader artifacts: [
            		[
-           			artifactId: 'spring-boot-starter-parent',
+           			artifactId: 'ExamThourayaS2',
            			classifier: '',
            			file: 'target/ExamThourayaS2-1.0.jar',
            			type: 'jar'
