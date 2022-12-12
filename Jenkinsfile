@@ -60,7 +60,7 @@ pipeline {
            type: 'jar']],
            credentialsId: 'nexus3',
            groupId: 'tn.esprit',
-           nexusUrl: 'http://192.168.1.105:8081/repository/maven-releases',
+           nexusUrl: '192.168.1.105:8081/repository/maven-releases',
            nexusVersion: 'nexus3',
            protocol: 'http',
            repository: 'docker-exam-releases',
