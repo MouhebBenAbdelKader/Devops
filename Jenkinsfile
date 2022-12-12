@@ -66,7 +66,7 @@ pipeline {
            	nexusUrl: '192.168.1.105:8081/repository/maven-releases',
            	nexusVersion: 'nexus3',
            	protocol: 'http',
-           	repository: 'deploymentRepo',
+           	repository: 'docker-exam-releases',
            	version: '1.0'
         }
      }
