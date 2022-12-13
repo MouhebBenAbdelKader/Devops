@@ -31,6 +31,7 @@ public class Voyage  implements Serializable {
 	private Long idVoyage;
 	
 
+
 	long codeVoyage;
 	
 	@Enumerated(EnumType.STRING)
@@ -161,7 +162,14 @@ public class Voyage  implements Serializable {
 	public Voyage() {
 		super();
 	}
-	
+
+	public Voyage(Long idVoyage, long codeVoyage) {
+		super();
+		this.idVoyage = idVoyage;
+		this.codeVoyage = codeVoyage;
+		
+	}
+
 	
 
 

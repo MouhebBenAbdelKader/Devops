@@ -1,8 +1,8 @@
 Manifest-Version: 1.0
-Built-By: ASUS
-Build-Jdk: 17.0.2
+Built-By: Mouheb
+Build-Jdk: 17.0.1
 Implementation-Title: ExamThourayaS2
-Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Version: 1.0.0
 Implementation-Vendor-Id: tn.esprit
 Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
  -starter-parent/ExamThourayaS2

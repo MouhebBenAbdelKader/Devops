@@ -85,6 +85,8 @@ stage('DOCKER COMPOSE') {
                 sh 'docker compose up -d --build'
             }
       }
+
+
           stage("Publish  image to docker hub") {
         steps{
         sh 'docker login -u mouhebabdelkadder -p dckr_pat_oanTvQFnRjlS_gv0RjWASysUDKA'
