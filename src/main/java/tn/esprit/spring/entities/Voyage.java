@@ -163,12 +163,12 @@ public class Voyage  implements Serializable {
 		super();
 	}
 
-	public Voyage(Long idVoyage, long codeVoyage) {
+	/* public Voyage(Long idVoyage, long codeVoyage) {
 		super();
 		this.idVoyage = idVoyage;
 		this.codeVoyage = codeVoyage;
 		
-	}
+	}*/
 
 	
 

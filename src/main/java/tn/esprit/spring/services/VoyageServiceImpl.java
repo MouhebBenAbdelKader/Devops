@@ -50,7 +50,7 @@ public class VoyageServiceImpl implements IVoyageService {
     @Override
     public void supprimerVoyage(Voyage v) {
         //TODO method
-        voyageRepository.delete(v);
+        //voyageRepository.delete(v);
     }
 
 }
