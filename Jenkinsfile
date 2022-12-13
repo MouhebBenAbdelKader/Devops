@@ -20,11 +20,7 @@ pipeline {
             }
 }
 
-         stage('DOCKER COMPOSE') {
-         steps{
-                sh 'docker compose up -d --build'
-            }
-      }
+
          stage("MVN Clean Install after getting  "){
             steps {
                 sh """mvn clean install -Dskiptest """
@@ -85,7 +81,11 @@ pipeline {
           }
         }
         }
-
+         stage('DOCKER COMPOSE') {
+         steps{
+                sh 'docker compose up -d --build'
+            }
+      }
 
 
           stage("Publish  image to docker hub") {

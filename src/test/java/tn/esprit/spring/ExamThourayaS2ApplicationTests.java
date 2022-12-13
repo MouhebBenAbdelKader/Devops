@@ -15,7 +15,7 @@ import tn.esprit.spring.services.IVoyageurService;
 
 @SpringBootTest
 class ExamThourayaS2ApplicationTests {
-    @Autowired
+/*    @Autowired
     IVoyageurService ivoyageurservice;
 
 
@@ -42,6 +42,6 @@ class ExamThourayaS2ApplicationTests {
 		assertNull(ivoyageurservice.recupererVoyageParId(v.getIdVoyageur()));
 	}
 
-
+*/
 }
 
